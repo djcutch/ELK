@@ -9,17 +9,24 @@ services:
         ELK_VERSION: $ELK_VERSION
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+<<<<<<< HEAD
         - esdata:/usr/share/elasticsearch/data
+=======
+>>>>>>> 54f1699180896f9a5682337c48baa87a6a74e51c
     ports:
       - "9200:9200"
       - "9300:9300"
     environment:
+<<<<<<< HEAD
         ES_JAVA_OPTS: "-Xms512m -Xmx4g"
        - bootstrap.memory_lock=true
     ulimits:
       memlock:
         soft: -1
         hard: -1
+=======
+      ES_JAVA_OPTS: "-Xmx4096m -Xms4096m"
+>>>>>>> 54f1699180896f9a5682337c48baa87a6a74e51c
     networks:
       - elk
 
@@ -35,7 +42,11 @@ services:
       - "5000:5000"
       - "9600:9600"
     environment:
+<<<<<<< HEAD
       LS_JAVA_OPTS: "-Xmx1g -Xms1g"
+=======
+      LS_JAVA_OPTS: "-Xmx1024m -Xms1024m"
+>>>>>>> 54f1699180896f9a5682337c48baa87a6a74e51c
     networks:
       - elk
     depends_on:
