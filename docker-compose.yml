@@ -33,6 +33,7 @@ services:
       - ./logstash/patterns:/usr/share/logstash/patterns:ro
     ports:
       - "1514:1514"
+      - "1514:1514/udp"
       - "9600:9600"
     environment:
       LS_JAVA_OPTS: "-Xms1g -Xmx1g"
