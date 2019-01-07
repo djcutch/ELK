@@ -301,3 +301,6 @@ $ docker stack services elk
 
 **NOTE:** to scale Elasticsearch in Swarm mode, configure *zen* to use the DNS name `tasks.elasticsearch` instead of
 `elasticsearch`.
+
+***NOTE:*** if running ubuntu udp packet will come back at the gw of docker network run  sudo conntrack -D -p udp
+ 
